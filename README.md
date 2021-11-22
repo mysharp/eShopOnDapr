@@ -4,7 +4,7 @@ A sample .NET Core distributed application based on *[eShopOnContainers](https:/
 
 The accompanying e-book **Dapr for .NET developers** uses the sample code in this repository to demonstrate Dapr features and benefits. You can [read the online version](https://docs.microsoft.com/dotnet/architecture/dapr-for-net-developers/) and [download the PDF](https://aka.ms/dapr-ebook) for free.
 
-![eShopOnDapr](docs/media/eshopondapr.png)
+![eShopOnDapr](docs/media/screenshot.png)
 
 Dapr enables developers using any language or framework to easily write microservices. It addresses many of the challenges found that come along with distributed applications, such as:
 
@@ -17,11 +17,11 @@ Dapr enables developers using any language or framework to easily write microser
 
 eShopOnDapr evolves (or, *Daprizes*, if you will) the earlier eShopOnContainers application by integrating Dapr building blocks and components: 
 
-![eShopOnDapr reference application architecture.](./docs/media/eshop-on-dapr-buildingblocks.png)
+![eShopOnDapr reference application architecture.](./docs/media/buildingblocks.png)
 
 As focus of the eShopOnDapr reference application is on Dapr, the original application has been updated. The updated architecture consists of:
 
-- A [Single Page Application](https://docs.microsoft.com/archive/msdn-magazine/2013/november/asp-net-single-page-applications-build-modern-responsive-web-apps-with-asp-net) frontend written in the popular Angular SPA framework. It sends user requests to an API gateway microservice.
+- A frontend web-app written in [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor). It sends user requests to an API gateway microservice.
 
 - The API gateway abstracts the backend core microservices from the frontend client. It's implemented using [Envoy](https://www.envoyproxy.io/), a high performant, open-source service proxy. Envoy routes  incoming requests to various backend microservices. Most requests are simple CRUD operations (for example, get the list of brands from the catalog) and handled by a direct call to a backend microservice.
 
@@ -46,10 +46,10 @@ eShopOnDapr runs in containers and requires Docker to run. There are various way
 - [Run eShopOnDapr from Visual Studio Code (allows you to debug individual containers))](docs/run-eshop.md#run-eshopondapr-from-visual-studio-code)
 - [Run eShopOnDapr in Kubernetes](docs/run-eshop.md#run-eshopondapr-on-kubernetes)
 
-Note that it will take a little while to start all containers. eShopOnDapr includes a health UI that you can use to see if the containers are ready. You can access it at `http://localhost:5107/hc-ui`.
+Note that it will take a little while to start all containers. eShopOnDapr includes a health UI that you can use to see if the containers are ready. You can access it at http://localhost:5107/healthchecks-ui.
 
 When all microservices are healthy, you can navigate to http://localhost:5104 to view the eShopOnDapr UI.
 
 ### Attributions
 
-Model photos by  [Laura Chouette](https://unsplash.com/@laurachouette?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText), [Heng Films](https://unsplash.com/@hengfilms?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) & [Enmanuel betances Santos](https://unsplash.com/@enmanuelbs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on  [Unsplash](https://unsplash.com/photos/HqtYwlY9dxs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
+Model photo by  [Angelo Pantazis](https://unsplash.com/@angelopantazis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  on  [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
